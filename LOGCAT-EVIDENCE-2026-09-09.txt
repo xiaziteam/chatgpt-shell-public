@@ -1,0 +1,570 @@
+--------- beginning of main
+09-09 04:58:57.971   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager expire 41 lines
+09-09 04:58:58.174   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+--------- beginning of system
+09-09 04:58:58.285  1328  2174 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.xiaziteam.chatgptshell/.MainActivity} from uid 0
+09-09 04:58:58.296   565   565 I android.hardware.power-service-qti: Power setMode: 5 to: 1
+09-09 04:58:58.298   605   643 E ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 1]
+09-09 04:58:58.298   605   643 E ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 1]
+09-09 04:58:58.303 14390 14392 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:58:58.308  1328  1384 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10165; state: DISABLED
+09-09 04:58:58.309  1328  1400 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10165; state: ENABLED
+09-09 04:58:58.324  3201  4461 I x-n-x   : endEvent:{"arg3":"364317","args":{"page":"com.taobao.idlefish.xcontainer.protocol.TabPageConfig$Page@d246ba7","position":"1","spm-cnt":"a2170.7897990.0.0","spm-url":"a2170.7897990.0.0","tab":"com.taobao.idlefish.xcontainer.protocol.TabPageConfig$Tab@8576c66"},"beginTime":1788900774007,"contextHash":197324059,"eventId":2001,"key":"MainActivity197324059","pageName":"Page_xyHome","toLog":false,"toTrigger":false}
+09-09 04:58:58.333   508   508 D Zygote  : Forked child process 14398
+09-09 04:58:58.335  1328  1400 I ActivityManager: Start proc 14398:com.xiaziteam.chatgptshell/u0a165 for pre-top-activity {com.xiaziteam.chatgptshell/com.xiaziteam.chatgptshell.MainActivity}
+--------- beginning of kernel
+09-09 04:58:58.337     0     0 I chatty  : uid=0(root) logd identical 6 lines
+09-09 04:58:58.338     0     0 D SELinux : initialized (dev tmpfs, type tmpfs), uses transition SIDs
+09-09 04:58:58.345  3201  3999 W FMCEP   : addUTEvent called
+09-09 04:58:58.347 14398 14398 I am.chatgptshel: Late-enabling -Xcheck:jni
+09-09 04:58:58.375   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:58.381   618  1842 I AudioPolicyService: Capy check package com.xiaziteam.chatgptshell, sdk 34
+09-09 04:58:58.396 14398 14398 I am.chatgptshel: Unquickening 13 vdex files!
+09-09 04:58:58.409  5331  5338 I adbd    : jdwp connection from 14398
+09-09 04:58:58.466  3201  3999 W FMCEP   : addUTEvent called
+09-09 04:58:58.576   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:58.781   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:58.917 14398 14398 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-09 04:58:58.918 14398 14398 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-09 04:58:58.983   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:59.116  3201  3201 W Choreographer: Frame time is 0.199475 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+09-09 04:58:59.185   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:59.356 14398 14398 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+09-09 04:58:59.386   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:59.458 14398 14398 W am.chatgptshel: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (greylist, reflection, allowed)
+09-09 04:58:59.459 14398 14398 W am.chatgptshel: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+09-09 04:58:59.587   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:59.743 14398 14398 I Choreographer: Skipped 46 frames!  The application may be doing too much work on its main thread.
+09-09 04:58:59.787   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: QUALCOMM build                   : 7331a27, Ieeb4a86f7b
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: Build Date                       : 11/13/19
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: OpenGL ES Shader Compiler Version: EV031.27.05.02
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: Local Branch                     : 
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: Remote Branch                    : 
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: Remote Branch                    : 
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: Reconstruct Branch               : 
+09-09 04:58:59.795 14398 14423 I AdrenoGLES: Build Config                     : S L 8.0.12 AArch64
+09-09 04:58:59.800 14398 14423 I AdrenoGLES: PFP: 0x005ff11a, ME: 0x005ff066
+09-09 04:58:59.837   447   447 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device manifest.
+09-09 04:58:59.837 14398 14423 I Gralloc4: mapper 4.x is not supported
+09-09 04:58:59.838   447   447 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device manifest.
+09-09 04:58:59.838 14398 14423 W Gralloc3: mapper 3.x is not supported
+09-09 04:58:59.933 14398 14423 I OpenGLRenderer: Davey! duration=985ms; Flags=1, IntendedVsync=6466286103840, Vsync=6467065764832, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=6467082312885, AnimationStart=6467082325645, PerformTraversalsStart=6467082652416, DrawStart=6467155435392, SyncQueued=6467174570602, SyncStart=6467175018363, IssueDrawCommandsStart=6467175147477, SwapBuffers=6467270541914, FrameCompleted=6467271940664, DequeueBufferDuration=170521, QueueBufferDuration=478230, GpuCompleted=0, 
+09-09 04:58:59.940   627   670 W ServiceManager: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10165 pid=14398
+09-09 04:58:59.940   627   670 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10165 => denied (537 us)
+09-09 04:58:59.941  1328  1398 I ActivityTaskManager: Displayed com.xiaziteam.chatgptshell/.MainActivity: +1s653ms
+09-09 04:58:59.943   565   565 I android.hardware.power-service-qti: Power setMode: 5 to: 0
+09-09 04:58:59.988   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:58:59.994  3201  3999 W FMCEP   : addUTEvent called
+09-09 04:59:00.007  1959  1959 D KeyguardClockSwitch: Updating clock: 4:59
+09-09 04:59:00.102   612   640 E Sensors : sns_reg_la.c(193):reg write: offset 1792, num bytes: 24
+09-09 04:59:00.190   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:01.407   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 6 lines
+09-09 04:59:01.610   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:01.697 14444 14444 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+09-09 04:59:01.704 14444 14444 I AndroidRuntime: Using default boot image
+09-09 04:59:01.705 14444 14444 I AndroidRuntime: Leaving lock profiling enabled
+09-09 04:59:01.714 14444 14444 I app_process: Core platform API reporting enabled, enforcing=false
+09-09 04:59:01.812   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:01.872 14444 14444 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+09-09 04:59:01.872 14444 14444 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+09-09 04:59:01.889 14444 14444 I app_process: The ClassLoaderContext is a special shared library.
+09-09 04:59:01.926 14444 14444 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+09-09 04:59:01.942 14444 14444 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+09-09 04:59:02.015   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:02.108  2756  2821 I LatinIME:LogUtils: Dictionary info: dictionary = spellcheck_userunigram.en_US ; version = 1788901142 ; date = ?
+09-09 04:59:02.147  2756  2821 I LatinIME:LogUtils: Dictionary info: dictionary = main:en_us ; version = 54 ; date = 1414726260
+09-09 04:59:02.216   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:02.376 14444 14444 D AndroidRuntime: Shutting down VM
+09-09 04:59:02.418   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:03.863   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 7 lines
+09-09 04:59:04.067   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:04.143 14462 14462 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+09-09 04:59:04.149 14462 14462 I AndroidRuntime: Using default boot image
+09-09 04:59:04.149 14462 14462 I AndroidRuntime: Leaving lock profiling enabled
+09-09 04:59:04.156 14462 14462 I app_process: Core platform API reporting enabled, enforcing=false
+09-09 04:59:04.270   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:04.311 14462 14462 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+09-09 04:59:04.311 14462 14462 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+09-09 04:59:04.328 14462 14462 I app_process: The ClassLoaderContext is a special shared library.
+09-09 04:59:04.365 14462 14462 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+09-09 04:59:04.381 14462 14462 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+09-09 04:59:04.406 14462 14462 D AndroidRuntime: Shutting down VM
+09-09 04:59:04.429   541  2635 D audio_hw_primary: start_output_stream: enter: stream(0xeff84330)usecase(1: low-latency-playback) devices(0x2)
+09-09 04:59:04.431   541  2635 D audio_hw_primary: select_devices for use case (low-latency-playback)
+09-09 04:59:04.431   541  2635 D audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: )
+09-09 04:59:04.431   541  2635 I msm8974_platform: platform_check_and_set_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+09-09 04:59:04.431   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(1) new_snd_devices(0)
+09-09 04:59:04.431   541  2635 I msm8974_platform: platform_check_and_set_codec_backend_cfg: new_snd_devices[0] is 2
+09-09 04:59:04.431   541  2635 I msm8974_platform: platform_check_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+09-09 04:59:04.431   541  2635 D msm8974_platform: platform_check_codec_backend_cfg:becf: afe: playback on codec device not supporting native playback set default Sample Rate(48k)
+09-09 04:59:04.431   541  2635 I msm8974_platform: platform_check_codec_backend_cfg:becf: afe: Codec selected backend: 0 updated bit width: 16 and sample rate: 48000
+09-09 04:59:04.431   541  2635 D audio_hw_primary: check_usecases_codec_backend:becf: force routing 0
+09-09 04:59:04.431   541  2635 E msm8974_platform: platform_check_backends_match: Invalid snd_device = 
+09-09 04:59:04.431   541  2635 D audio_hw_primary: check_usecases_codec_backend:becf: (65) check_usecases curr device: speaker, usecase device: backends match 0
+09-09 04:59:04.431   541  2635 D audio_hw_primary: check_usecases_codec_backend:becf: check_usecases num.of Usecases to switch 0
+09-09 04:59:04.431   541  2635 D hardware_info: hw_info_append_hw_type : device_name = speaker
+09-09 04:59:04.431   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:04.431   541  2635 D audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+09-09 04:59:04.431   541  2635 D audio_route: Apply path: speaker
+09-09 04:59:04.431   541  2635 D audio_hw_utils: audio_extn_utils_send_app_type_cfg: usecase->out_snd_device speaker
+09-09 04:59:04.431   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:04.431  1328  2174 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:04.431   541  2635 E msm8974_platform: platform_get_snd_device_backend_index: BE DAI Name Table is not present
+09-09 04:59:04.432   541  2635 E audio_hw_utils: send_app_type_cfg_for_device: Couldn't get the backend index for snd device speaker ret=-14
+09-09 04:59:04.432   541  2635 D audio_hw_utils: audio_extn_btsco_get_sample_rate:Not a BT SCO device, need not update sampling rate
+09-09 04:59:04.432   541  2635 I audio_hw_utils: send_app_type_cfg_for_device PLAYBACK app_type 69937, acdb_dev_id 14, sample_rate 48000, snd_device_be_idx -14
+09-09 04:59:04.432   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(1) new_snd_devices(0)
+09-09 04:59:04.432   541  2635 D audio_hw_utils: audio_extn_btsco_get_sample_rate:Not a BT SCO device, need not update sampling rate
+09-09 04:59:04.432   541  2635 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 14, path = 0, app id = 0x11131, sample rate = 48000
+09-09 04:59:04.432   541  2635 D ACDB-LOADER: ACDB -> send_asm_topology
+09-09 04:59:04.432   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> send_adm_topology
+09-09 04:59:04.433  1328  2174 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> send_audtable
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE_SIZE
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> send_audvoltable
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_VOL_STEP_TABLE_SIZE
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE, vol index 5
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> AUDIO_SET_VOL_CAL cal type = 12
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_SIZE
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> send_audstrmtable
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_V2
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> audstrm_cal->cal_type.cal_data.cal_size = 16
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> send_afe_topology
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_TOPOLOGY_ID
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> GET_AFE_TOPOLOGY_ID for adcd_id 14, Topology Id 112fc
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> send_afe_cal
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE_SIZE
+09-09 04:59:04.433   541  2635 D android.hardware.audio.service: Failed to fetch the lookup information of the device 0000000E 
+09-09 04:59:04.433   541  2635 E ACDB-LOADER: Error: ACDB_CMD_GET_AFE_COMMON_TABLE_SIZE Returned = -19
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE
+09-09 04:59:04.433   541  2635 D android.hardware.audio.service: Failed to fetch the lookup information of the device 0000000E 
+09-09 04:59:04.433   541  2635 E ACDB-LOADER: Error: ACDB AFE returned = -19
+09-09 04:59:04.433   541  2635 D ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL
+09-09 04:59:04.434   541  2635 D ACDB-LOADER: ACDB -> send_hw_delay : acdb_id = 14 path = 0
+09-09 04:59:04.434   541  2635 D ACDB-LOADER: ACDB -> ACDB_AVSYNC_INFO: ACDB_CMD_GET_DEVICE_PROPERTY
+09-09 04:59:04.434   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:04.434   541  2635 I msm8974_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 2 uc_id 1 snd_dev 2
+09-09 04:59:04.434   541  2635 D audio_hw_primary: enable_audio_route: apply mixer and update path: low-latency-playback smartpa
+09-09 04:59:04.434   541  2635 D audio_route: Apply path: low-latency-playback smartpa
+09-09 04:59:04.435     0     0 I msm8996_mi2s_snd_startup_tert: dai name soc:qcom,msm-dai-mi2s:qcom,msm- ffffffc031f79010 substream = subdevice #0  stream = 0 port_id = 4100 slave 0 ext_mclk_rate 0
+09-09 04:59:04.435     0     0 I msm8996_mi2s_snd_startup_tert: Enabling bit-clock, clk_freq_in_hz = 1536000
+09-09 04:59:04.435   541  2635 D audio_hw_primary: select_devices: done
+09-09 04:59:04.438   541  2635 D msm8974_platform: platform_set_channel_map mixer_ctl_name:Playback Channel Map15
+09-09 04:59:04.438   541  2635 D msm8974_platform: platform_set_channel_map: set mapping(1 2 0 0 0 0 0 0) for channel:2
+09-09 04:59:04.451     0     0 E q6asm_callback: payload size of 8 is less than expected.
+09-09 04:59:04.464     0     0 I chatty  : uid=0(root) logd identical 2 lines
+09-09 04:59:04.467   541  2635 D audio_hw_primary: start_output_stream: exit
+09-09 04:59:04.468   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:04.468   541  2635 I msm8974_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 2 uc_id 1 snd_dev 2
+09-09 04:59:04.470     0     0 E q6asm_callback: payload size of 8 is less than expected.
+09-09 04:59:04.471   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:04.638  1328  1375 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:04.638   618   851 W APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+09-09 04:59:04.672   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:04.873   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 1 line
+09-09 04:59:05.072  1328  1375 I ActivityTaskManager: START u0 {cmp=com.android.vpndialogs/.ConfirmDialog} from uid 10165
+09-09 04:59:05.075   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:05.083   565   565 I android.hardware.power-service-qti: Power setMode: 5 to: 1
+09-09 04:59:05.084   605   643 E ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 1]
+09-09 04:59:05.084   605   643 E ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 1]
+09-09 04:59:05.097  1328  1384 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10105; state: DISABLED
+09-09 04:59:05.098  1328  1400 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10105; state: ENABLED
+09-09 04:59:05.113   508   508 D Zygote  : Forked child process 14488
+09-09 04:59:05.115  1328  1400 I ActivityManager: Start proc 14488:com.android.vpndialogs/u0a105 for pre-top-activity {com.android.vpndialogs/com.android.vpndialogs.ConfirmDialog}
+09-09 04:59:05.117     0     0 D SELinux : initialized (dev tmpfs, type tmpfs), uses transition SIDs
+09-09 04:59:05.118     0     0 I chatty  : uid=0(root) logd identical 2 lines
+09-09 04:59:05.119     0     0 D SELinux : initialized (dev tmpfs, type tmpfs), uses transition SIDs
+09-09 04:59:05.139  5331  5338 I adbd    : jdwp connection from 14488
+09-09 04:59:05.169   618  1842 I AudioPolicyService: Capy check package com.android.vpndialogs, sdk 30
+09-09 04:59:05.176 14488 14488 I roid.vpndialog: The ClassLoaderContext is a special shared library.
+09-09 04:59:05.200 14488 14488 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-09 04:59:05.200 14488 14488 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-09 04:59:05.228  1328  2174 E AppOps  : noteOperation
+09-09 04:59:05.228  1328  2174 E AppOps  : java.lang.SecurityException: Specified package com.xiaziteam.chatgptshell under uid 10105 but it is really 10165
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.appop.AppOpsService.verifyAndGetBypass(AppOpsService.java:3976)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.appop.AppOpsService.noteOperationUnchecked(AppOpsService.java:3113)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.appop.AppOpsService.noteOperationImpl(AppOpsService.java:3101)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.appop.AppOpsService.noteOperation(AppOpsService.java:3084)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at android.app.AppOpsManager.noteOpNoThrow(AppOpsManager.java:7452)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at android.app.AppOpsManager.noteOpNoThrow(AppOpsManager.java:7398)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.connectivity.Vpn.doesPackageHaveAppop(Vpn.java:1091)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.connectivity.Vpn.isVpnServicePreConsented(Vpn.java:1096)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.connectivity.Vpn.isVpnPreConsented(Vpn.java:1078)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.connectivity.Vpn.prepare(Vpn.java:932)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at com.android.server.ConnectivityService.prepareVpn(ConnectivityService.java:4683)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at android.net.IConnectivityManager$Stub.onTransact(IConnectivityManager.java:1194)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at android.os.Binder.execTransactInternal(Binder.java:1154)
+09-09 04:59:05.228  1328  2174 E AppOps  : 	at android.os.Binder.execTransact(Binder.java:1123)
+09-09 04:59:05.276   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: QUALCOMM build                   : 7331a27, Ieeb4a86f7b
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: Build Date                       : 11/13/19
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: OpenGL ES Shader Compiler Version: EV031.27.05.02
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: Local Branch                     : 
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: Remote Branch                    : 
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: Remote Branch                    : 
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: Reconstruct Branch               : 
+09-09 04:59:05.295 14488 14510 I AdrenoGLES: Build Config                     : S L 8.0.12 AArch64
+09-09 04:59:05.300 14488 14510 I AdrenoGLES: PFP: 0x005ff11a, ME: 0x005ff066
+09-09 04:59:05.330   447   447 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device manifest.
+09-09 04:59:05.330 14488 14510 I Gralloc4: mapper 4.x is not supported
+09-09 04:59:05.330   447   447 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device manifest.
+09-09 04:59:05.330 14488 14510 W Gralloc3: mapper 3.x is not supported
+09-09 04:59:05.354   627   670 W ServiceManager: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10105 pid=14488
+09-09 04:59:05.355   627   670 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10105 => denied (2650 us)
+09-09 04:59:05.357  1328  1398 I ActivityTaskManager: Displayed com.android.vpndialogs/.ConfirmDialog: +276ms
+09-09 04:59:05.359   565   565 I android.hardware.power-service-qti: Power setMode: 5 to: 0
+09-09 04:59:05.381 14398 14514 D ProfileInstaller: Installing profile for com.xiaziteam.chatgptshell
+09-09 04:59:05.477   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:06.906   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 7 lines
+09-09 04:59:07.111   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:07.136     0     0 W healthd : battery l=100 v=4354 t=36.5 h=2 st=5 c=-152 fc=2241000 chg=a
+09-09 04:59:07.137   560   560 I android.hardware.health@2.0-service.leeco_8996: SRAM data: 2241000
+09-09 04:59:07.163  2302  2302 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+09-09 04:59:07.316   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:07.521   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:07.559   541  3111 D audio_hw_primary: out_standby: enter: stream (0xeff84330) usecase(1: low-latency-playback)
+09-09 04:59:07.617     0     0 E q6asm_callback: payload size of 8 is less than expected.
+09-09 04:59:07.631     0     0 I msm8996_mi2s_snd_shutdown_tert: dai name soc:qcom,msm-dai-mi2s:qcom,msm- ffffffc031f79010  substream = subdevice #0  stream = 0 port_id = 4100
+09-09 04:59:07.631     0     0 I msm8996_mi2s_snd_shutdown_tert: Disabling bit-clk
+09-09 04:59:07.640   541  3111 D audio_hw_primary: disable_audio_route: reset and update mixer path: low-latency-playback smartpa
+09-09 04:59:07.644   541  3111 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:07.645   541  3111 I msm8974_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 2 uc_id 1 snd_dev 2
+09-09 04:59:07.645   541  3111 D hardware_info: hw_info_append_hw_type : device_name = speaker
+09-09 04:59:07.645   541  3111 D audio_hw_primary: disable_snd_device: snd_device(2: speaker)
+09-09 04:59:07.645   541  3111 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:07.646   541  3111 D audio_hw_primary: out_standby: exit
+09-09 04:59:07.655  1328  2174 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:07.726   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:08.746   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 5 lines
+09-09 04:59:08.951   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:09.119  3931  3946 W ssioncontrolle: Reducing the number of considered missed Gc histogram windows from 638 to 100
+09-09 04:59:09.154   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:09.560   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 2 lines
+09-09 04:59:09.762   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:09.911  4216  4388 W Settings: Setting adb_enabled has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
+09-09 04:59:09.964   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:13.848     0     0 D logd    : logdr: UID=0 GID=0 PID=14526 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+09-09 04:59:16.687   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 33 lines
+09-09 04:59:16.889   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:16.982  3201  3333 W Settings: Setting adb_enabled has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
+09-09 04:59:17.091   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:19.941   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 14 lines
+09-09 04:59:20.144   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:20.269   543   543 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+09-09 04:59:20.276   543   543 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+09-09 04:59:20.276   543   543 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+09-09 04:59:20.276     0     0 I         : irq 352, desc: ffffffc076113a00, depth: 0, count: 0, unhandled: 0
+09-09 04:59:20.276     0     0 I ->handle_irq(): ffffffc0003d1ce4, msm_gpio_irq_handler+0x0/0x150
+09-09 04:59:20.276     0     0 I ->irq_data.chip(): ffffffc001885ee8, gic_chip+0x0/0xe8
+09-09 04:59:20.276     0     0 I ->action(): (null)
+09-09 04:59:20.276     0     0 I         : IRQ_NOPROBE set
+09-09 04:59:20.276     0     0 I         : IRQ_NOREQUEST set
+09-09 04:59:20.276     0     0 I         : IRQ_NOTHREAD set
+09-09 04:59:20.279   543  2445 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+09-09 04:59:20.295   543  2445 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+09-09 04:59:20.295   543  2445 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+09-09 04:59:20.342   543  2445 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+09-09 04:59:20.348   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:20.958   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 3 lines
+09-09 04:59:21.162   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:21.301   543  2452 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+09-09 04:59:21.301   543  2452 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+09-09 04:59:21.365   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:21.452   543  2324 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+09-09 04:59:21.569   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:21.777   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:21.809 14530 14530 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+09-09 04:59:21.817 14530 14530 I AndroidRuntime: Using default boot image
+09-09 04:59:21.817 14530 14530 I AndroidRuntime: Leaving lock profiling enabled
+09-09 04:59:21.825 14530 14530 I app_process: Core platform API reporting enabled, enforcing=false
+09-09 04:59:21.980   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:21.984 14530 14530 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+09-09 04:59:21.984 14530 14530 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+09-09 04:59:22.001 14530 14530 I app_process: The ClassLoaderContext is a special shared library.
+09-09 04:59:22.003 14530 14530 I app_process: The ClassLoaderContext is a special shared library.
+09-09 04:59:22.038 14530 14530 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+09-09 04:59:22.053 14530 14530 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+09-09 04:59:22.085  1328 13546 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@2b2f5c0
+09-09 04:59:22.093 14530 14546 V UiAutomation: Init UiAutomation@3830ae8[id=6, flags=0]
+09-09 04:59:22.181   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:22.818   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 3 lines
+09-09 04:59:23.022   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:23.193 14530 14530 W AccessibilityNodeInfoDumper: Fetch time: 48ms
+09-09 04:59:23.199  1328 13546 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@29dcc96
+09-09 04:59:23.204 14530 14546 V UiAutomation: Init UiAutomation@3830ae8[id=-1, flags=0]
+09-09 04:59:23.225   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:23.243 14530 14530 D AndroidRuntime: Shutting down VM
+09-09 04:59:23.432   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:34.248   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 53 lines
+09-09 04:59:34.451   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:34.572  3201  3201 W CrashSDKBkgdHan: type=1400 audit(0.0:299): avc: denied { read } for name="loadavg" dev="proc" ino=4026532445 scontext=u:r:untrusted_app:s0:c162,c256,c512,c768 tcontext=u:object_r:proc_loadavg:s0 tclass=file permissive=0 app=com.taobao.idlefish
+09-09 04:59:34.654   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:39.343   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 23 lines
+09-09 04:59:39.548   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:39.609  4216  4216 W CrashSDKBkgdHan: type=1400 audit(0.0:300): avc: denied { read } for name="loadavg" dev="proc" ino=4026532445 scontext=u:r:untrusted_app:s0:c162,c256,c512,c768 tcontext=u:object_r:proc_loadavg:s0 tclass=file permissive=0 app=com.taobao.idlefish
+09-09 04:59:39.751   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:43.432   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 18 lines
+09-09 04:59:43.635   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:43.728   449   458 D DrmLibTime: got the req here! ret=0
+09-09 04:59:43.729   449   458 D DrmLibTime: command id, time_cmd_id = 770
+09-09 04:59:43.729   449   458 D DrmLibTime: time_getutcsec starts!
+09-09 04:59:43.729   449   458 D DrmLibTime: QSEE Time Listener: time_getutcsec
+09-09 04:59:43.729   449   458 D DrmLibTime: QSEE Time Listener: get_utc_seconds
+09-09 04:59:43.730   449   458 D DrmLibTime: QSEE Time Listener: time_get_modem_time
+09-09 04:59:43.730   449   458 D DrmLibTime: QSEE Time Listener: Checking if ATS_MODEM is set or not.
+09-09 04:59:43.730   449   458 D QC-time-services: Lib:time_genoff_operation: pargs->base = 13
+09-09 04:59:43.730   449   458 D QC-time-services: Lib:time_genoff_operation: pargs->operation = 2
+09-09 04:59:43.730   449   458 D QC-time-services: Lib:time_genoff_operation: pargs->ts_val = 0
+09-09 04:59:43.733   816   896 D QC-time-services: Daemon: Connection accepted:time_genoff
+09-09 04:59:43.733   449   458 D QC-time-services: Lib:time_genoff_operation: Send to server  passed!!
+09-09 04:59:43.734   816 14561 D QC-time-services: Daemon:Received base = 13, unit = 1, operation = 2,value = 0
+09-09 04:59:43.734   816 14561 D QC-time-services: Daemon:genoff_opr: Base = 13, val = 0, operation = 2
+09-09 04:59:43.735   816 14561 D QC-time-services: offset is: 0 for base: 13
+09-09 04:59:43.735   449   458 E QC-time-services: Receive Passed == base = 13, unit = 1, operation = 2, result = 0
+09-09 04:59:43.735   449   458 D DrmLibTime: QSEE Time Listener: ATS_MODEM is not set. Fallback to Android system time.
+09-09 04:59:43.735   449   458 D DrmLibTime: QSEE Time Listener: Retrieved Android system time: 1788901183
+09-09 04:59:43.735   449   458 D DrmLibTime: time_getutcsec returns 0, sec = 1788901183; nsec = 0
+09-09 04:59:43.735   449   458 D DrmLibTime: time_getutcsec finished! 
+09-09 04:59:43.735   449   458 D DrmLibTime: iotcl_continue_command finished! and return 0 
+09-09 04:59:43.735   449   458 D DrmLibTime: before calling ioctl to read the next time_cmd
+09-09 04:59:43.736   816   896 E QC-time-services: Daemon: Time-services: Waiting to acceptconnection
+09-09 04:59:43.782   949  2307 I QFP     : QfpCalibTest::calibTestCommand: control 22, buffer size 16, result 0
+09-09 04:59:43.840   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:45.883   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 10 lines
+09-09 04:59:46.087   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:46.089 14563 14563 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+09-09 04:59:46.097 14563 14563 I AndroidRuntime: Using default boot image
+09-09 04:59:46.097 14563 14563 I AndroidRuntime: Leaving lock profiling enabled
+09-09 04:59:46.106 14563 14563 I app_process: Core platform API reporting enabled, enforcing=false
+09-09 04:59:46.265 14563 14563 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+09-09 04:59:46.265 14563 14563 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+09-09 04:59:46.281 14563 14563 I app_process: The ClassLoaderContext is a special shared library.
+09-09 04:59:46.289   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:46.316 14563 14563 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+09-09 04:59:46.331 14563 14563 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+09-09 04:59:46.356 14563 14563 D AndroidRuntime: Shutting down VM
+09-09 04:59:46.373  1328 13546 I Vpn     : Switched from com.xiaziteam.chatgptshell to com.xiaziteam.chatgptshell
+09-09 04:59:46.375  1328 13546 D Vpn     : setting state=IDLE, reason=prepare
+09-09 04:59:46.375   541  2635 D audio_hw_primary: start_output_stream: enter: stream(0xeff84330)usecase(1: low-latency-playback) devices(0x2)
+09-09 04:59:46.376  1328  3103 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:46.376   541  2635 D audio_hw_primary: select_devices for use case (low-latency-playback)
+09-09 04:59:46.376   541  2635 D audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: )
+09-09 04:59:46.376   541  2635 I msm8974_platform: platform_check_and_set_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+09-09 04:59:46.376  1328  3103 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:46.376   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(1) new_snd_devices(0)
+09-09 04:59:46.376   541  2635 I msm8974_platform: platform_check_and_set_codec_backend_cfg: new_snd_devices[0] is 2
+09-09 04:59:46.376   541  2635 I msm8974_platform: platform_check_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+09-09 04:59:46.376   541  2635 D msm8974_platform: platform_check_codec_backend_cfg:becf: afe: playback on codec device not supporting native playback set default Sample Rate(48k)
+09-09 04:59:46.376   541  2635 I msm8974_platform: platform_check_codec_backend_cfg:becf: afe: Codec selected backend: 0 updated bit width: 16 and sample rate: 48000
+09-09 04:59:46.376   541  2635 D audio_hw_primary: check_usecases_codec_backend:becf: force routing 0
+09-09 04:59:46.377   541  2635 E msm8974_platform: platform_check_backends_match: Invalid snd_device = 
+09-09 04:59:46.377   541  2635 D audio_hw_primary: check_usecases_codec_backend:becf: (65) check_usecases curr device: speaker, usecase device: backends match 0
+09-09 04:59:46.377   541  2635 D audio_hw_primary: check_usecases_codec_backend:becf: check_usecases num.of Usecases to switch 0
+09-09 04:59:46.377   541  2635 D hardware_info: hw_info_append_hw_type : device_name = speaker
+09-09 04:59:46.377   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:46.377   541  2635 D audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+09-09 04:59:46.377   541  2635 D audio_route: Apply path: speaker
+09-09 04:59:46.377   541  2635 D audio_hw_utils: audio_extn_utils_send_app_type_cfg: usecase->out_snd_device speaker
+09-09 04:59:46.377   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:46.377   541  2635 E msm8974_platform: platform_get_snd_device_backend_index: BE DAI Name Table is not present
+09-09 04:59:46.377   541  2635 E audio_hw_utils: send_app_type_cfg_for_device: Couldn't get the backend index for snd device speaker ret=-14
+09-09 04:59:46.377   541  2635 D audio_hw_utils: audio_extn_btsco_get_sample_rate:Not a BT SCO device, need not update sampling rate
+09-09 04:59:46.377   541  2635 I audio_hw_utils: send_app_type_cfg_for_device PLAYBACK app_type 69937, acdb_dev_id 14, sample_rate 48000, snd_device_be_idx -14
+09-09 04:59:46.378   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(1) new_snd_devices(0)
+09-09 04:59:46.378   541  2635 D audio_hw_utils: audio_extn_btsco_get_sample_rate:Not a BT SCO device, need not update sampling rate
+09-09 04:59:46.378   541  2635 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 14, path = 0, app id = 0x11131, sample rate = 48000
+09-09 04:59:46.378   541  2635 D ACDB-LOADER: ACDB -> send_asm_topology
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> send_adm_topology
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> send_audtable
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE_SIZE
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> send_audvoltable
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_VOL_STEP_TABLE_SIZE
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE, vol index 5
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> AUDIO_SET_VOL_CAL cal type = 12
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_SIZE
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> send_audstrmtable
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_V2
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> audstrm_cal->cal_type.cal_data.cal_size = 16
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> send_afe_topology
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_TOPOLOGY_ID
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> GET_AFE_TOPOLOGY_ID for adcd_id 14, Topology Id 112fc
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> send_afe_cal
+09-09 04:59:46.379   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE_SIZE
+09-09 04:59:46.379   541  2635 D android.hardware.audio.service: Failed to fetch the lookup information of the device 0000000E 
+09-09 04:59:46.380   541  2635 E ACDB-LOADER: Error: ACDB_CMD_GET_AFE_COMMON_TABLE_SIZE Returned = -19
+09-09 04:59:46.380   541  2635 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE
+09-09 04:59:46.380   541  2635 D android.hardware.audio.service: Failed to fetch the lookup information of the device 0000000E 
+09-09 04:59:46.380   541  2635 E ACDB-LOADER: Error: ACDB AFE returned = -19
+09-09 04:59:46.380   541  2635 D ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL
+09-09 04:59:46.380   541  2635 D ACDB-LOADER: ACDB -> send_hw_delay : acdb_id = 14 path = 0
+09-09 04:59:46.380   541  2635 D ACDB-LOADER: ACDB -> ACDB_AVSYNC_INFO: ACDB_CMD_GET_DEVICE_PROPERTY
+09-09 04:59:46.380   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:46.380   541  2635 I msm8974_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 2 uc_id 1 snd_dev 2
+09-09 04:59:46.380   541  2635 D audio_hw_primary: enable_audio_route: apply mixer and update path: low-latency-playback smartpa
+09-09 04:59:46.380   541  2635 D audio_route: Apply path: low-latency-playback smartpa
+09-09 04:59:46.382   541  2635 D audio_hw_primary: select_devices: done
+09-09 04:59:46.382     0     0 I msm8996_mi2s_snd_startup_tert: dai name soc:qcom,msm-dai-mi2s:qcom,msm- ffffffc031f79010 substream = subdevice #0  stream = 0 port_id = 4100 slave 0 ext_mclk_rate 0
+09-09 04:59:46.382     0     0 I msm8996_mi2s_snd_startup_tert: Enabling bit-clock, clk_freq_in_hz = 1536000
+09-09 04:59:46.386   541  2635 D msm8974_platform: platform_set_channel_map mixer_ctl_name:Playback Channel Map15
+09-09 04:59:46.386   541  2635 D msm8974_platform: platform_set_channel_map: set mapping(1 2 0 0 0 0 0 0) for channel:2
+09-09 04:59:46.399     0     0 E q6asm_callback: payload size of 8 is less than expected.
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: QUALCOMM build                   : 7331a27, Ieeb4a86f7b
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: Build Date                       : 11/13/19
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: OpenGL ES Shader Compiler Version: EV031.27.05.02
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: Local Branch                     : 
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: Remote Branch                    : 
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: Remote Branch                    : 
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: Reconstruct Branch               : 
+09-09 04:59:46.423  1328 13118 I AdrenoGLES: Build Config                     : S L 8.0.12 AArch64
+09-09 04:59:46.424   541  2635 D audio_hw_primary: start_output_stream: exit
+09-09 04:59:46.424   541  2635 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:46.424   541  2635 I msm8974_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 2 uc_id 1 snd_dev 2
+09-09 04:59:46.426     0     0 I chatty  : uid=0(root) logd identical 3 lines
+09-09 04:59:46.429  1328 13118 I AdrenoGLES: PFP: 0x005ff11a, ME: 0x005ff066
+09-09 04:59:46.457 14488 14510 D OpenGLRenderer: endAllActiveAnimators on 0x74342b8bc0 (RippleDrawable) with handle 0x73542c5460
+09-09 04:59:46.468  1328  1384 I ActivityManager: Killing 5235:com.android.dialer/u0a130 (adj 985): empty for 6432s
+09-09 04:59:46.473  2395  2406 W droid.launcher: Reducing the number of considered missed Gc histogram windows from 649 to 100
+09-09 04:59:46.490   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:46.525   508   508 I Zygote  : Process 5235 exited due to signal 9 (Killed)
+09-09 04:59:46.537  1328  1409 I libprocessgroup: Successfully killed process cgroup uid 10130 pid 5235 in 46ms
+09-09 04:59:46.546  1959  1975 I ndroid.systemu: NativeAlloc concurrent copying GC freed 3092(214KB) AllocSpace objects, 0(0B) LOS objects, 78% free, 6820KB/30MB, paused 163us total 147.535ms
+09-09 04:59:46.568 14398 14398 I EscapeRelay: listening on 127.0.0.1:18080
+09-09 04:59:46.600   618   851 W APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+09-09 04:59:46.602  1328  2185 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:46.692   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:46.774  1328  1328 D NotificationService: 0|com.xiaziteam.chatgptshell|1|null|10165: granting content://settings/system/notification_sound
+09-09 04:59:46.776  1328  1328 I chatty  : uid=1000 system_server identical 1 line
+09-09 04:59:46.777  1328  1328 D NotificationService: 0|com.xiaziteam.chatgptshell|1|null|10165: granting content://settings/system/notification_sound
+09-09 04:59:46.785  1328  1328 W NotificationHistory: Attempted to add notif for locked/gone/disabled user 0
+09-09 04:59:46.893   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 1 line
+09-09 04:59:47.096   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:47.264 14398 14583 I TunnelVpn: extracted asset sing-box (34995800 bytes)
+09-09 04:59:47.298   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:47.335 14398 14583 I TunnelVpn: extracted asset geoip.db (3947343 bytes)
+09-09 04:59:47.400 14398 14583 I TunnelVpn: extracted asset geosite.db (3762160 bytes)
+09-09 04:59:47.416  1328  1381 I EthernetTracker: interfaceLinkStateChanged, iface: tun0, up: false
+09-09 04:59:47.431  1328 13546 D VpnJni  : Address added on tun0: 172.19.0.1/30
+09-09 04:59:47.432  1328 13546 D Vpn     : setting state=CONNECTING, reason=establish
+09-09 04:59:47.433  1328 13546 D ConnectivityService: registerNetworkAgent NetworkAgentInfo{ ni{[type: VPN[], state: CONNECTING/CONNECTING, reason: (unspecified), extra: (none), failover: false, available: false, roaming: false]}  network{102}  nethandle{441492361229}  lp{{InterfaceName: tun0 LinkAddresses: [ 172.19.0.1/30 ] DnsAddresses: [ /1.0.0.1 ] Domains:  MTU: 1500 Routes: [ 0.0.0.0/0 -> 0.0.0.0 tun0 mtu 0,::/0 unreachable mtu 0,172.19.0.0/30 -> 0.0.0.0 tun0 mtu 0 ]}}  nc{[ Transports: WIFI|VPN Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED LinkUpBandwidth>=611443Kbps LinkDnBandwidth>=611443Kbps Uids: <{0-99999}> OwnerUid: 10165 RequestorUid: -1 RequestorPackageName: null]}  Score{101}  everValidated{false}  lastValidated{false}  created{false} lingering{false} explicitlySelected{false} acceptUnvalidated{false} everCaptivePortalDetected{false} lastCaptivePortalDetected{false} partialConnectivity{false} acceptPartialConnectivity{false} clat{mBaseIface: null, mIface: null, mState: IDLE} }
+09-09 04:59:47.434  1328 13546 D Vpn     : setting state=CONNECTED, reason=agentConnect
+09-09 04:59:47.435  1328 13546 I Vpn     : Established by com.xiaziteam.chatgptshell on tun0
+09-09 04:59:47.435 14398 14583 I TunnelVpn: TUN established fd=75
+09-09 04:59:47.437  1328  1381 I EthernetTracker: interfaceLinkStateChanged, iface: tun0, up: true
+09-09 04:59:47.461  1328  1810 D ConnectivityService: [102 WIFI|VPN] EVENT_NETWORK_INFO_CHANGED, going from CONNECTING to CONNECTING
+09-09 04:59:47.473   507   580 E Netd    : getIfIndex: cannot find interface tun0
+09-09 04:59:47.474   507   580 W TrafficController: UID ingress interface filtering not possible without BPF owner match
+09-09 04:59:47.476  1328  1810 D ConnectivityService: [102 WIFI|VPN] EVENT_NETWORK_INFO_CHANGED, going from CONNECTING to CONNECTED
+09-09 04:59:47.477  1328  1810 W DnsManager: updatePrivateDns(102, PrivateDnsConfig{true:/[]})
+09-09 04:59:47.478  1328  1810 D ConnectivityService: Setting DNS servers for network 102 to [/1.0.0.1]
+09-09 04:59:47.478  1328  1810 D DnsManager: sendDnsConfigurationForNetwork(102, [1.0.0.1], [], 1800, 25, 8, 64, 0, 0, , [1.0.0.1])
+09-09 04:59:47.480   507 14587 W resolv  : Validating DnsTlsServer on netId 102
+09-09 04:59:47.481  1328  1810 D ConnectivityService: Adding iface tun0 to network 102
+09-09 04:59:47.490   507   507 W TrafficController: UID ingress interface filtering not possible without BPF owner match
+09-09 04:59:47.493  3201 13554 V [dmojo_support]: Start DetachFromVM
+09-09 04:59:47.494  3201 13554 V [dmojo_support]: End DetachFromVM
+09-09 04:59:47.495  1328  1810 D ConnectivityService: Setting DNS servers for network 102 to [/1.0.0.1]
+09-09 04:59:47.496 14588 14588 W Thread-5: type=1400 audit(0.0:301): avc: granted { execute } for name="sing-box" dev="sda9" ino=263879 scontext=u:r:untrusted_app:s0:c165,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c165,c256,c512,c768 tclass=file
+09-09 04:59:47.496 14588 14588 W Thread-5: type=1400 audit(0.0:302): avc: denied { execute_no_trans } for path="/data/data/com.xiaziteam.chatgptshell/files/sing-box" dev="sda9" ino=263879 scontext=u:r:untrusted_app:s0:c165,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c165,c256,c512,c768 tclass=file permissive=0
+09-09 04:59:47.496  1328  1810 D DnsManager: sendDnsConfigurationForNetwork(102, [1.0.0.1], [], 1800, 25, 8, 64, 0, 0, , [1.0.0.1])
+09-09 04:59:47.501 14398 14583 E TunnelVpn: Tunnel error
+09-09 04:59:47.501 14398 14583 E TunnelVpn: java.io.IOException: Cannot run program "/data/user/0/com.xiaziteam.chatgptshell/files/sing-box" (in directory "/data/user/0/com.xiaziteam.chatgptshell/files"): error=13, Permission denied
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1050)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at com.xiaziteam.chatgptshell.TunnelVpnService.startTunnel(TunnelVpnService.kt:111)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at com.xiaziteam.chatgptshell.TunnelVpnService.onStartCommand$lambda$1(TunnelVpnService.kt:55)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at com.xiaziteam.chatgptshell.TunnelVpnService.$r8$lambda$hkzj89-Y_uZs3bC3i-NLetc9BmY(Unknown Source:0)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at com.xiaziteam.chatgptshell.TunnelVpnService$$ExternalSyntheticLambda1.run(Unknown Source:16)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at java.lang.Thread.run(Thread.java:923)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: Caused by: java.io.IOException: error=13, Permission denied
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at java.lang.UNIXProcess.forkAndExec(Native Method)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at java.lang.UNIXProcess.<init>(UNIXProcess.java:133)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at java.lang.ProcessImpl.start(ProcessImpl.java:141)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+09-09 04:59:47.501 14398 14583 E TunnelVpn: 	... 5 more
+09-09 04:59:47.504   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:47.505  1328  1810 W BestClock: java.time.DateTimeException: Missing NTP fix
+09-09 04:59:47.517  1328  1810 W BestClock: java.time.DateTimeException: Missing NTP fix
+09-09 04:59:47.520  1328  1810 D ConnectivityService: NetReassign [15 : 100 → 102, 10 : 100 → 102, 22 : 100 → 102, 27 : 100 → 102, 16 : 100 → 102, 25 : 100 → 102, 31 : 100 → 102, 35 : 100 → 102, 11 : 100 → 102]
+09-09 04:59:47.520  1328  1768 W BestClock: java.time.DateTimeException: Missing NTP fix
+09-09 04:59:47.526  1328  1768 W BestClock: java.time.DateTimeException: Missing NTP fix
+09-09 04:59:47.526  1328  2099 D NetworkTimeUpdateService: New default network 102; checking time.
+09-09 04:59:47.530  2274  2890 D QCNEJ/DefaultNetworkInfoRelay: Default network available: 102
+09-09 04:59:47.531  2274  2890 D QCNEJ/NativeHalConnector: -> SND notifyDefaultNetworkChanged(17)
+09-09 04:59:47.532  2274  2890 E QCNEJ/NativeHalConnector: Failed to parse input for notifyDefaultNetworkChanged: java.lang.IllegalArgumentException: Unknown RatType:17
+09-09 04:59:47.532  2100 14586 D NetworkMonitor/102: Network would not satisfy default request, resolving private DNS
+09-09 04:59:47.541  1328  1810 D ConnectivityService: Sending CONNECTED broadcast for type 17 [102 WIFI|VPN] isDefaultNetwork=false
+09-09 04:59:47.549  1328  1810 D ConnectivityService: [102 WIFI|VPN] validation passed
+09-09 04:59:47.554  1328  1810 D ConnectivityService: Setting DNS servers for network 102 to [/1.0.0.1]
+09-09 04:59:47.555  1328  1810 D DnsManager: sendDnsConfigurationForNetwork(102, [1.0.0.1], [], 1800, 25, 8, 64, 0, 0, , [1.0.0.1])
+09-09 04:59:47.565  1328  1768 W BestClock: java.time.DateTimeException: Missing NTP fix
+09-09 04:59:47.565  1328  1381 I GnssNetworkConnectivityHandler: updateNetworkState, state=CLOSED, connected=true, network=102, capabilities=[ Transports: WIFI|VPN Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED LinkUpBandwidth>=611443Kbps LinkDnBandwidth>=611443Kbps Uids: <{0-99999}> AdministratorUids: [] RequestorUid: -1 RequestorPackageName: null], apn: null, availableNetworkCount: 2
+09-09 04:59:47.577  1328  1768 W BestClock: java.time.DateTimeException: Missing NTP fix
+09-09 04:59:47.708   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:48.320   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 3 lines
+09-09 04:59:48.523   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:48.621 14619 14619 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+09-09 04:59:48.628 14619 14619 I AndroidRuntime: Using default boot image
+09-09 04:59:48.629 14619 14619 I AndroidRuntime: Leaving lock profiling enabled
+09-09 04:59:48.636 14619 14619 I app_process: Core platform API reporting enabled, enforcing=false
+09-09 04:59:48.726   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:48.801 14619 14619 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+09-09 04:59:48.802 14619 14619 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt66l.dat
+09-09 04:59:48.819 14619 14619 I app_process: The ClassLoaderContext is a special shared library.
+09-09 04:59:48.854 14619 14619 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+09-09 04:59:48.868 14619 14619 D AndroidRuntime: Calling main entry com.android.commands.svc.Svc
+09-09 04:59:48.876 14619 14619 D AndroidRuntime: Shutting down VM
+09-09 04:59:48.930   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:49.135   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 1 line
+09-09 04:59:49.350   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:49.446 14635 14637 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:49.521   541  3111 D audio_hw_primary: out_standby: enter: stream (0xeff84330) usecase(1: low-latency-playback)
+09-09 04:59:49.554   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:49.575     0     0 E q6asm_callback: payload size of 8 is less than expected.
+09-09 04:59:49.587     0     0 I msm8996_mi2s_snd_shutdown_tert: dai name soc:qcom,msm-dai-mi2s:qcom,msm- ffffffc031f79010  substream = subdevice #0  stream = 0 port_id = 4100
+09-09 04:59:49.587     0     0 I msm8996_mi2s_snd_shutdown_tert: Disabling bit-clk
+09-09 04:59:49.590   541  3111 D audio_hw_primary: disable_audio_route: reset and update mixer path: low-latency-playback smartpa
+09-09 04:59:49.592   541  3111 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:49.592   541  3111 I msm8974_platform: platform_get_custom_mtmx_params: no matching param with id 0 ip_ch 2 op_ch 2 uc_id 1 snd_dev 2
+09-09 04:59:49.592   541  3111 D hardware_info: hw_info_append_hw_type : device_name = speaker
+09-09 04:59:49.592   541  3111 D audio_hw_primary: disable_snd_device: snd_device(2: speaker)
+09-09 04:59:49.592   541  3111 D msm8974_platform: platform_split_snd_device: snd_device(2) num devices(0) new_snd_devices(0)
+09-09 04:59:49.593   541  3111 D audio_hw_primary: out_standby: exit
+09-09 04:59:49.595  1328  2185 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+09-09 04:59:49.756   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:50.165   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 2 lines
+09-09 04:59:50.369   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:50.461  1328  2185 D WifiNl80211Manager: Scan result ready event
+09-09 04:59:50.462  1328  2185 D WifiNative: Scan result ready event
+09-09 04:59:50.465   951  2190 I LOWI-8.6.0.70: [LOWI-Scan] lowi_close_record:Scan done in 6495186ms, 17 APs in scan results
+09-09 04:59:50.471   951   975 I LOWI-8.6.0.70: [LOWIUtils] responseToOutPostcard - TO: FreeWifiScanObserver, FROM:   LOWI-SERVER, RESP:  LOWI_ASYNC_DISCOVERY_SCAN_RESULTS
+09-09 04:59:50.572   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:56.951     0     0 D logd    : logdr: UID=0 GID=0 PID=14657 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+09-09 04:59:57.337   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 33 lines
+09-09 04:59:57.540   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:57.546  1328  2099 D SntpClient: request time failed: java.net.UnknownHostException: Unable to resolve host "time.android.com": No address associated with hostname
+09-09 04:59:57.743   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 04:59:59.790   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 10 lines
+09-09 04:59:59.993   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 05:00:00.010   612   640 E Sensors : sns_reg_la.c(193):reg write: offset 11008, num bytes: 22
+09-09 05:00:00.012  1959  1959 D KeyguardClockSwitch: Updating clock: 5:00
+09-09 05:00:00.197   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 05:00:00.607   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 2 lines
+09-09 05:00:00.810   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 05:00:01.008  3201  3999 W FMCEP   : addUTEvent called
+09-09 05:00:01.012   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 05:00:06.723   446   446 I chatty  : uid=1000(system) /system/bin/servicemanager identical 28 lines
+09-09 05:00:06.928   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 05:00:07.131   560   560 I android.hardware.health@2.0-service.leeco_8996: SRAM data: 2241000
+09-09 05:00:07.132     0     0 W healthd : battery l=100 v=4356 t=36.7 h=2 st=5 c=-152 fc=2241000 chg=a
+09-09 05:00:07.137   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 05:00:07.146  2302  2302 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+09-09 05:00:07.340   446   446 E SELinux : avc:  denied  { find } for pid=3931 uid=10158 name=tethering scontext=u:r:permissioncontroller_app:s0:c158,c256,c512,c768 tcontext=u:object_r:tethering_service:s0 tclass=service_manager permissive=0
+09-09 05:00:09.148     0     0 D logd    : logdr: UID=0 GID=0 PID=14668 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns

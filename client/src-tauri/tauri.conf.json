@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "ChatGPT虾壳",
+  "version": "1.2.0",
+  "identifier": "com.xiaziteam.chatgpt-shell",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173/",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "ChatGPT虾壳",
+        "width": 420,
+        "height": 480,
+        "minWidth": 360,
+        "minHeight": 400,
+        "resizable": true,
+        "center": true,
+        "decorations": true,
+        "devtools": true
+      }
+    ],
+    "security": {}
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

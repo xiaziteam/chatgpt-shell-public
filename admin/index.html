@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>虾壳 · 管理后台</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,sans-serif;background:#0f0f1a;color:#e0e0e0;min-height:100vh}
+.nav{background:#1a1a2e;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2a2a4a}
+.nav-title{font-size:18px;font-weight:700;color:#10a37f}
+.nav-sub{font-size:12px;color:#666}
+.container{max-width:900px;margin:24px auto;padding:0 16px}
+.login{max-width:360px;margin:80px auto;text-align:center}
+.login h2{color:#10a37f;margin-bottom:24px;font-size:22px}
+.login input{width:100%;padding:12px;border:1px solid #333;border-radius:8px;background:#16213e;color:#fff;font-size:14px;margin-bottom:12px}
+.login input:focus{border-color:#10a37f;outline:none}
+.login button{width:100%;padding:12px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;background:#10a37f;color:#fff}
+.login button:hover{background:#0d8c6d}
+.login .err{color:#e74c3c;font-size:13px;margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.stat-card{background:#16213e;border-radius:12px;padding:16px;text-align:center}
+.stat-num{font-size:28px;font-weight:700}
+.stat-label{font-size:11px;color:#888;margin-top:4px}
+.stat-basic .stat-num{color:#10a37f}
+.stat-pro .stat-num{color:#a78bfa}
+.stat-revoked .stat-num{color:#e74c3c}
+.actions{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.btn{padding:10px 18px;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer}
+.btn-basic{background:#10a37f;color:#fff}
+.btn-basic:hover{background:#0d8c6d}
+.btn-pro{background:#7c3aed;color:#fff}
+.btn-pro:hover{background:#6d28d9}
+.btn-danger{background:transparent;color:#e74c3c;border:1px solid #e74c3c;padding:3px 10px;border-radius:6px;font-size:11px;cursor:pointer}
+.btn-danger:hover{background:#e74c3c;color:#fff}
+.btn-secondary{background:#2a2a4a;color:#e0e0e0}
+.btn-secondary:hover{background:#3a3a5a}
+.tabs{display:flex;gap:8px;margin-bottom:16px}
+.tab{flex:1;padding:11px;border:1px solid #2a2a4a;border-radius:10px;background:#16213e;color:#888;font-size:14px;font-weight:700;cursor:pointer;text-align:center}
+.tab:hover{color:#e0e0e0;border-color:#3a3a5a}
+.tab .n{font-size:13px;margin-left:6px;font-weight:600}
+.tab-on{color:#fff;border-color:#10a37f;background:#1a2a3e}
+#toptab-codes.tab-on{border-color:#10a37f}
+#toptab-tunnels.tab-on{border-color:#7c3aed}
+#toptab-rescue.tab-on{border-color:#38bdf8}
+#toptab-hunter.tab-on{border-color:#eab308}
+.subtabs{display:flex;gap:8px;margin-bottom:12px}
+.subtab{flex:1;padding:8px;border:1px solid #2a2a4a;border-radius:8px;background:#141428;color:#888;font-size:12px;font-weight:600;cursor:pointer;text-align:center}
+.subtab:hover{color:#e0e0e0}
+.subtab-on{color:#fff;background:#1a2a3e}
+#subtab-active.subtab-on{border-color:#10a37f}
+#subtab-used.subtab-on{border-color:#eab308}
+#subtab-revoked.subtab-on{border-color:#e74c3c}
+.tab-hint{font-size:11px;color:#555;margin:-4px 0 12px;text-align:right}
+table{width:100%;border-collapse:collapse;background:#16213e;border-radius:12px;overflow:hidden;margin-bottom:24px}
+th{background:#1a1a3e;padding:12px 16px;text-align:left;font-size:12px;color:#888;font-weight:600}
+td{padding:10px 16px;border-top:1px solid #2a2a4a;font-size:13px}
+.code{font-family:monospace;font-size:14px;letter-spacing:0.5px;user-select:all}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600}
+.tag-basic{background:rgba(16,163,127,0.15);color:#10a37f}
+.tag-pro{background:rgba(124,58,237,0.15);color:#a78bfa}
+.tag-active{background:rgba(16,163,127,0.15);color:#10a37f}
+.tag-used{background:rgba(234,179,8,0.15);color:#eab308}
+.tag-revoked{background:rgba(231,76,60,0.15);color:#e74c3c}
+.gen-result{background:#1a2a4e;border:1px solid #10a37f;border-radius:8px;padding:12px 16px;margin-bottom:16px;display:none}
+.gen-code{font-family:monospace;font-size:18px;color:#10a37f;font-weight:700;letter-spacing:1px}
+.gen-copy{margin-left:12px;padding:4px 12px;border:1px solid #10a37f;border-radius:6px;background:none;color:#10a37f;font-size:11px;cursor:pointer}
+.gen-copy:hover{background:#10a37f;color:#fff}
+.empty{text-align:center;padding:40px;color:#555}
+.hidden{display:none}
+.tunnel-card{background:#16213e;border-radius:12px;padding:16px;margin-bottom:12px}
+.tunnel-card pre{background:#0f0f1a;padding:12px;border-radius:8px;font-size:11px;overflow-x:auto;margin-top:8px;color:#888}
+.sub-note{font-size:12px;color:#7a7a95;margin:-6px 0 14px;line-height:1.6}
+.stat-x-total .stat-num{color:#e0e0e0}
+.stat-x-consent .stat-num{color:#10a37f}
+.stat-x-today .stat-num{color:#38bdf8}
+.sel{padding:9px 12px;border:1px solid #333;border-radius:8px;background:#16213e;color:#e0e0e0;font-size:13px;cursor:pointer}
+.sel:focus{border-color:#10a37f;outline:none}
+.db-meta{font-size:11px;color:#666;align-self:center;margin-left:auto}
+.tag-pending{background:rgba(234,179,8,0.15);color:#eab308}
+.tag-redeemed{background:rgba(56,189,248,0.15);color:#38bdf8}
+.tag-consented{background:rgba(16,163,127,0.15);color:#10a37f}
+.tag-expired{background:rgba(120,120,140,0.15);color:#9aa0b4}
+td .mono{font-family:monospace;font-size:12px}
+.cred{font-size:11px}
+.cred-yes{color:#eab308}
+.cred-no{color:#444}
+.audit-ok{color:#10a37f}
+.audit-no{color:#3a3a52}
+</style>
+</head>
+<body>
+
+<div class="login" id="loginPage">
+  <h2>🦐 虾壳管理后台</h2>
+  <input type="password" id="masterKey" placeholder="管理员密钥" />
+  <button onclick="doLogin()">登录</button>
+  <div class="err" id="loginErr"></div>
+</div>
+
+<div class="hidden" id="mainPage">
+  <div class="nav">
+    <div><div class="nav-title">🦐 虾壳 · 管理后台</div><div class="nav-sub">远程管理 · locatenotify.online</div></div>
+    <button class="btn btn-danger" onclick="doLogout()">退出</button>
+  </div>
+  <div class="container">
+    <div class="stats">
+      <div class="stat-card stat-basic"><div class="stat-num" id="basicCount">-</div><div class="stat-label">Basic 有效</div></div>
+      <div class="stat-card stat-pro"><div class="stat-num" id="proCount">-</div><div class="stat-label">Pro 有效</div></div>
+      <div class="stat-card stat-revoked"><div class="stat-num" id="revokedCount">-</div><div class="stat-label">已吊销/已用</div></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab tab-on" id="toptab-codes" onclick="switchTop('codes')">🎫 激活码</button>
+      <button class="tab" id="toptab-tunnels" onclick="switchTop('tunnels')">🔐 隧道凭证</button>
+      <button class="tab" id="toptab-rescue" onclick="switchTop('rescue')">🐟 救援审计</button>
+      <button class="tab" id="toptab-hunter" onclick="switchTop('hunter')">🎯 猎手快照</button>
+    </div>
+
+    <div id="pane-codes">
+      <div class="actions">
+        <button class="btn btn-basic" onclick="generateCode('basic')">生成 Basic 码</button>
+        <button class="btn btn-pro" onclick="generateCode('pro')">生成 Pro 码</button>
+      </div>
+      <div class="gen-result" id="genResult">
+        <span style="color:#888;font-size:12px">新激活码：</span>
+        <span class="gen-code" id="genCode"></span>
+        <button class="gen-copy" onclick="copyCode()">复制</button>
+      </div>
+      <div class="subtabs">
+        <button class="subtab subtab-on" id="subtab-active" onclick="switchCodeTab('active')">有效码<span class="n" id="subActiveN"></span></button>
+        <button class="subtab" id="subtab-used" onclick="switchCodeTab('used')">已使用<span class="n" id="subUsedN"></span></button>
+        <button class="subtab" id="subtab-revoked" onclick="switchCodeTab('revoked')">已吊销<span class="n" id="subRevokedN"></span></button>
+      </div>
+      <div class="tab-hint">默认只看有效码（最新在前）；历史在库里，点标签查看</div>
+      <table>
+        <thead><tr><th>激活码</th><th>类型</th><th>状态</th><th>设备</th><th>创建</th><th>操作</th></tr></thead>
+        <tbody id="codeTable"></tbody>
+      </table>
+      <div class="empty" id="emptyMsg" style="display:none">暂无激活码</div>
+    </div>
+
+    <div id="pane-tunnels" style="display:none">
+      <div id="tunnelList"></div>
+    </div>
+
+    <div id="pane-rescue" style="display:none">
+      <div class="sub-note">
+        只读审计视图：每一枚救援码的 <b>发码 → 兑换 → 买家同意</b> 全链路留痕，合规三件套可追溯。<br />
+        按铁律，<b>发码与吊销的拍板权归波迪</b>，本页不提供任何写操作；数据源为同机 rescue-auth 的 SQLite（只读挂载）。
+      </div>
+      <div class="stats">
+        <div class="stat-card stat-x-total"><div class="stat-num" id="rsTotal">-</div><div class="stat-label">救援码总数</div></div>
+        <div class="stat-card stat-x-consent"><div class="stat-num" id="rsConsented">-</div><div class="stat-label">已获买家同意</div></div>
+        <div class="stat-card stat-x-today"><div class="stat-num" id="rsToday">-</div><div class="stat-label">今日发码</div></div>
+      </div>
+      <div class="actions">
+        <select class="sel" id="rsStatus" onchange="loadRescue()">
+          <option value="">全部状态</option>
+          <option value="pending">pending 待兑换</option>
+          <option value="redeemed">redeemed 已兑换</option>
+          <option value="consented">consented 已同意</option>
+          <option value="revoked">revoked 已撤销</option>
+          <option value="expired">expired 已过期</option>
+        </select>
+        <button class="btn btn-secondary" onclick="loadRescue()">刷新</button>
+        <span class="db-meta" id="rsMeta"></span>
+      </div>
+      <table>
+        <thead><tr><th>救援码</th><th>档位</th><th>状态</th><th>订单号</th><th>买家</th><th>发码(UTC)</th><th>兑换</th><th>同意</th><th>凭证</th></tr></thead>
+        <tbody id="rescueTable"></tbody>
+      </table>
+      <div class="empty" id="rescueEmpty" style="display:none">暂无救援码记录</div>
+    </div>
+
+    <div id="pane-hunter" style="display:none">
+      <div class="sub-note">
+        猎手真身在东京 VPS；2号每 30 分钟经 SSH <b>只读拉取</b>一次快照
+        （<code>hunter_pull.sh</code> → <code>hunter_snapshot.json</code>）。<br />
+        本页仅展示，<b>不含任何抓取或写操作</b>；猎手抓取链路是否启用属独立决策，与本页无关。
+      </div>
+      <div class="stats">
+        <div class="stat-card stat-x-total"><div class="stat-num" id="hnItems">-</div><div class="stat-label">监控商品</div></div>
+        <div class="stat-card stat-x-consent"><div class="stat-num" id="hnAlive">-</div><div class="stat-label">在售</div></div>
+        <div class="stat-card stat-x-today"><div class="stat-num" id="hnEvents">-</div><div class="stat-label">事件总数</div></div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-secondary" onclick="loadHunter()">刷新</button>
+        <span class="db-meta" id="hnMeta"></span>
+      </div>
+      <div class="sub-note" style="margin:8px 0 6px">我方在售链接（<b>免登录</b>探测，游客模式读公开商品页，不触碰登录态铁律）</div>
+      <div id="hnOurs"></div>
+      <div class="sub-note" style="margin:14px 0 6px">猎手监控任务</div>
+      <div id="hnWatches"></div>
+      <table>
+        <thead><tr><th>事件</th><th>商品</th><th>价格</th><th>时间</th></tr></thead>
+        <tbody id="hnEventTable"></tbody>
+      </table>
+      <div class="empty" id="hnEmpty" style="display:none">暂无猎手数据</div>
+    </div>
+  </div>
+</div>
+
+<script>
+var API = '';
+var mk = '';
+var allCodes = [];
+var codeTab = 'active';
+var emptyText = {active: '暂无有效激活码', used: '暂无已使用的激活码', revoked: '暂无已吊销的激活码'};
+
+function doLogin() {
+  mk = document.getElementById('masterKey').value;
+  if (!mk) return;
+  fetch(API + '/v1/admin/activation/list', {
+    method: 'POST', headers: {'Content-Type':'application/json', 'x-master-key': mk},
+    body: '{}'
+  }).then(r => r.json()).then(d => {
+    if (d.ok) {
+      document.getElementById('loginPage').className = 'login hidden';
+      document.getElementById('mainPage').className = '';
+      render(d.data.codes);
+      loadTunnels();
+      loadRescue();
+      loadHunter();
+    } else {
+      document.getElementById('loginErr').textContent = d.message || '密钥无效';
+    }
+  }).catch(() => {
+    document.getElementById('loginErr').textContent = '网络错误';
+  });
+}
+
+function doLogout() {
+  mk = '';
+  allCodes = [];
+  document.getElementById('loginPage').className = 'login';
+  document.getElementById('mainPage').className = 'hidden';
+}
+
+function switchTop(t) {
+  ['codes','tunnels','rescue','hunter'].forEach(k => {
+    document.getElementById('toptab-' + k).className = 'tab' + (k === t ? ' tab-on' : '');
+    document.getElementById('pane-' + k).style.display = k === t ? '' : 'none';
+  });
+}
+
+function switchCodeTab(t) {
+  codeTab = t;
+  ['active', 'used', 'revoked'].forEach(k => {
+    document.getElementById('subtab-' + k).className = 'subtab' + (k === t ? ' subtab-on' : '');
+  });
+  renderTable();
+}
+
+function byNewest(a, b) {
+  return (b.created_at || '').localeCompare(a.created_at || '');
+}
+
+function render(codes) {
+  allCodes = codes || [];
+  var active = allCodes.filter(c => c.status === 'active');
+  var used = allCodes.filter(c => c.status === 'used');
+  var revoked = allCodes.filter(c => c.status === 'revoked');
+  document.getElementById('basicCount').textContent = active.filter(c => c.plan === 'basic').length;
+  document.getElementById('proCount').textContent = active.filter(c => c.plan === 'pro').length;
+  document.getElementById('revokedCount').textContent = used.length + revoked.length;
+  document.getElementById('subActiveN').textContent = '(' + active.length + ')';
+  document.getElementById('subUsedN').textContent = '(' + used.length + ')';
+  document.getElementById('subRevokedN').textContent = '(' + revoked.length + ')';
+  renderTable();
+}
+
+function renderTable() {
+  var list = allCodes.filter(c => c.status === codeTab).sort(byNewest);
+  if (!list.length) {
+    document.getElementById('codeTable').innerHTML = '';
+    document.getElementById('emptyMsg').textContent = emptyText[codeTab];
+    document.getElementById('emptyMsg').style.display = 'block';
+    return;
+  }
+  document.getElementById('emptyMsg').style.display = 'none';
+  document.getElementById('codeTable').innerHTML = list.map(c => {
+    var typeTag = c.plan === 'basic' ? '<span class="tag tag-basic">Basic</span>' : '<span class="tag tag-pro">Pro</span>';
+    var statusMap = {active:'<span class="tag tag-active">有效</span>', used:'<span class="tag tag-used">已使用</span>', revoked:'<span class="tag tag-revoked">已吊销</span>'};
+    var statusTag = statusMap[c.status] || c.status;
+    var device = c.bound_device || '—';
+    var action = c.status === 'active' ? '<button class="btn-danger" onclick="revokeCode(\'' + c.code_id + '\')">吊销</button>' : '—';
+    return '<tr><td>' + c.code_id.slice(4) + '</td><td>' + typeTag + '</td><td>' + statusTag + '</td><td style="color:#666;font-size:11px">' + device + '</td><td style="color:#666">' + (c.created_at||'').slice(0,10) + '</td><td>' + action + '</td></tr>';
+  }).join('');
+}
+
+function loadCodes() {
+  fetch(API + '/v1/admin/activation/list', {
+    method: 'POST', headers: {'Content-Type':'application/json', 'x-master-key': mk},
+    body: '{}'
+  }).then(r => r.json()).then(d => { if (d.ok) render(d.data.codes); });
+}
+
+function loadTunnels() {
+  fetch(API + '/v1/admin/tunnel/list', {
+    method: 'POST', headers: {'Content-Type':'application/json', 'x-master-key': mk},
+    body: '{}'
+  }).then(r => r.json()).then(d => {
+    if (!d.ok) return;
+    var configs = d.data.configs || [];
+    var el = document.getElementById('tunnelList');
+    if (!configs.length) { el.innerHTML = '<div class="empty">暂无隧道配置</div>'; return; }
+    el.innerHTML = configs.map(c => {
+      var planTag = c.plan === 'basic' ? '<span class="tag tag-basic">Basic</span>' : '<span class="tag tag-pro">Pro</span>';
+      return '<div class="tunnel-card">' + planTag +
+        ' <b>' + c.server + ':' + c.server_port + '</b>' +
+        ' UUID: ' + (c.uuid||'').slice(0,8) + '…' +
+        ' SNI: ' + c.server_name +
+        ' 更新: ' + (c.updated_at||'').slice(0,10) +
+        '</div>';
+    }).join('');
+  });
+}
+
+function generateCode(plan) {
+  fetch(API + '/v1/admin/activation/create', {
+    method: 'POST', headers: {'Content-Type':'application/json', 'x-master-key': mk},
+    body: JSON.stringify({plan: plan})
+  }).then(r => r.json()).then(d => {
+    if (d.ok) {
+      document.getElementById('genCode').textContent = d.data.code;
+      document.getElementById('genResult').style.display = 'block';
+      loadCodes();
+    } else { alert(d.message); }
+  });
+}
+
+function revokeCode(codeId) {
+  if (!confirm('确定吊销？')) return;
+  fetch(API + '/v1/admin/activation/revoke', {
+    method: 'POST', headers: {'Content-Type':'application/json', 'x-master-key': mk},
+    body: JSON.stringify({code_id: codeId})
+  }).then(r => r.json()).then(d => {
+    if (d.ok) loadCodes();
+    else alert(d.message);
+  });
+}
+
+function copyCode() {
+  var code = document.getElementById('genCode').textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    document.querySelector('.gen-copy').textContent = '已复制';
+    setTimeout(() => { document.querySelector('.gen-copy').textContent = '复制'; }, 1500);
+  });
+}
+
+/* ── 闲鱼商单 · 救援审计（只读） ── */
+var RS_STATUS_MAP = {
+  pending:'<span class="tag tag-pending">待兑换</span>',
+  redeemed:'<span class="tag tag-redeemed">已兑换</span>',
+  consented:'<span class="tag tag-consented">已同意</span>',
+  revoked:'<span class="tag tag-revoked">已撤销</span>',
+  expired:'<span class="tag tag-expired">已过期</span>'
+};
+
+function loadRescue() {
+  var sel = document.getElementById('rsStatus');
+  var st = sel ? (sel.value || '') : '';
+  fetch(API + '/v1/admin/rescue/list', {
+    method: 'POST', headers: {'Content-Type':'application/json', 'x-master-key': mk},
+    body: JSON.stringify({status: st, limit: 200})
+  }).then(r => r.json()).then(d => { if (d.ok) renderRescue(d.data); })
+   .catch(() => {});
+}
+
+function fmtT(s) {
+  if (!s) return '<span class="audit-no">—</span>';
+  return '<span class="audit-ok">' + String(s).slice(5,16).replace('T',' ') + '</span>';
+}
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderRescue(data) {
+  var el = document.getElementById('rescueTable');
+  var empty = document.getElementById('rescueEmpty');
+  var meta = document.getElementById('rsMeta');
+  if (!data || !data.available) {
+    el.innerHTML = '';
+    empty.style.display = 'block';
+    empty.textContent = (data && data.reason) ? ('救援库不可用：' + data.reason) : '救援库不可用';
+    if (meta) meta.textContent = '';
+    return;
+  }
+  var st = data.stats || {};
+  document.getElementById('rsTotal').textContent = st.total || 0;
+  document.getElementById('rsConsented').textContent = st.consented || 0;
+  document.getElementById('rsToday').textContent = st.today || 0;
+
+  var codes = data.codes || [];
+  if (meta) meta.textContent = '库更新 ' + (data.db_mtime || '—') + ' · 显示 ' + codes.length + ' 条 · 时间为 UTC';
+  if (!codes.length) {
+    el.innerHTML = '';
+    empty.style.display = 'block';
+    empty.textContent = '暂无救援码记录';
+    return;
+  }
+  empty.style.display = 'none';
+  var labels = data.plan_labels || {};
+  el.innerHTML = codes.map(function(c) {
+    var s = c.status || 'unknown';
+    var statusTag = RS_STATUS_MAP[s] || ('<span class="tag">' + esc(s) + '</span>');
+    var cred = (c.has_session ? '<span class="cred cred-yes">● 会话</span> ' : '<span class="cred cred-no">○ 会话</span> ')
+             + (c.has_key ? '<span class="cred cred-yes">● KEY</span>' : '<span class="cred cred-no">○ KEY</span>');
+    return '<tr>' +
+      '<td class="mono">' + esc(c.code) + '</td>' +
+      '<td>' + esc(labels[c.plan] || c.plan || '—') + '</td>' +
+      '<td>' + statusTag + '</td>' +
+      '<td class="mono" style="color:#888">' + esc(c.order_id || '—') + '</td>' +
+      '<td>' + esc((c.buyer_id || '').slice(0,18) || '—') + '</td>' +
+      '<td>' + fmtT(c.issued_at) + '</td>' +
+      '<td>' + fmtT(c.redeemed_at) + '</td>' +
+      '<td>' + fmtT(c.consent_at) + '</td>' +
+      '<td>' + cred + '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+/* ── 闲鱼猎手 · 数据快照（只读） ── */
+var HN_TYPE_MAP = {
+  sold:'<span class="tag tag-revoked">已售出</span>',
+  price_drop:'<span class="tag tag-used">降价</span>',
+  new_recommendation:'<span class="tag tag-redeemed">新推荐</span>'
+};
+
+function loadHunter() {
+  fetch(API + '/v1/admin/rescue/hunter', {
+    method: 'POST', headers: {'Content-Type':'application/json', 'x-master-key': mk},
+    body: '{}'
+  }).then(r => r.json()).then(d => { if (d.ok) renderHunter(d.data); })
+   .catch(() => {});
+}
+
+function renderHunter(d) {
+  var meta = document.getElementById('hnMeta');
+  var empty = document.getElementById('hnEmpty');
+  var tbl = document.getElementById('hnEventTable');
+  var wbox = document.getElementById('hnWatches');
+  if (!d || !d.available) {
+    if (meta) meta.textContent = '';
+    tbl.innerHTML = '';
+    wbox.innerHTML = '';
+    empty.style.display = 'block';
+    empty.textContent = (d && d.reason) ? ('猎手快照不可用：' + d.reason) : '猎手快照不可用';
+    return;
+  }
+  var st = d.stats || {};
+  document.getElementById('hnItems').textContent = st.items_total || 0;
+  document.getElementById('hnAlive').textContent = st.items_alive || 0;
+  document.getElementById('hnEvents').textContent = st.events_total || 0;
+
+  var age = d._age_sec == null ? '—' : (d._age_sec < 120 ? d._age_sec + ' 秒前'
+            : Math.round(d._age_sec / 60) + ' 分钟前');
+  if (meta) meta.textContent = '快照 ' + age + ' · 库更新 ' + (st.last_seen || d.db_mtime || '—')
+    + (d._stale ? ' · ⚠️ 快照已陈旧(>2h)' : '');
+
+  var ours = (d.our_items && d.our_items.items) ? d.our_items.items : [];
+  var obox = document.getElementById('hnOurs');
+  if (obox) {
+    obox.innerHTML = ours.length ? ours.map(function(o) {
+      var tag = o.online
+        ? '<span class="tag tag-consented">在售</span>'
+        : '<span class="tag tag-revoked">掉线</span>';
+      return '<div class="tunnel-card">' + tag + ' <b>' + esc(o.name) + '</b> · '
+        + esc(o.title || o.item_id) + ' · 库存 ' + esc(o.quantity) + ' · 状态 '
+        + esc(o.status_str || o.reason) + ' · <span style="color:#666;font-size:11px">'
+        + fmtT(o.checked_at) + '</span></div>';
+    }).join('') : '<div class="empty" style="padding:14px">暂无我方商品状态</div>';
+  }
+
+  var ws = d.watches || [];
+  wbox.innerHTML = ws.length ? ws.map(function(w) {
+    var kw = '';
+    try { kw = (JSON.parse(w.keywords || '[]') || []).join(' / '); } catch (e) { kw = w.keywords || ''; }
+    return '<div class="tunnel-card"><span class="tag ' + (w.enabled ? 'tag-active' : 'tag-expired') + '">'
+      + (w.enabled ? '启用' : '停用') + '</span> <b>' + esc(w.name) + '</b> · 关键词 ' + esc(kw)
+      + ' · ¥' + esc(w.price_min) + '-' + esc(w.price_max) + ' · ' + esc(w.city || '全国') + '</div>';
+  }).join('') : '<div class="empty" style="padding:14px">暂无监控任务</div>';
+
+  var evs = d.events || [];
+  if (!evs.length) {
+    tbl.innerHTML = '';
+    empty.style.display = 'block';
+    empty.textContent = '暂无猎手事件';
+    return;
+  }
+  empty.style.display = 'none';
+  tbl.innerHTML = evs.map(function(e) {
+    return '<tr><td>' + (HN_TYPE_MAP[e.type] || esc(e.type)) + '</td>' +
+      '<td>' + esc(e.title || e.item_id) + (e.dead_reason ? ' <span style="color:#888">(' + esc(e.dead_reason) + ')</span>' : '') + '</td>' +
+      '<td>' + (e.price ? '¥' + esc(e.price) : '—') + '</td>' +
+      '<td>' + fmtT(e.created_at) + '</td></tr>';
+  }).join('');
+}
+
+document.getElementById('masterKey').onkeydown = function(e) { if (e.key === 'Enter') doLogin(); };
+</script>
+</body>
+</html>

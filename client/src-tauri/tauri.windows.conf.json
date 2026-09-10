@@ -1,0 +1,14 @@
+{
+  "bundle": {
+    "resources": {
+      "resources/geoip.db": "geoip.db",
+      "resources/geosite.db": "geosite.db",
+      "resources/sing-box.exe": "sing-box.exe"
+    },
+    "windows": {
+      "nsis": {
+        "languages": ["English", "SimpChinese"]
+      }
+    }
+  }
+}
