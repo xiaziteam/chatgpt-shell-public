@@ -1,0 +1,7 @@
+node_modules/
+dist/
+target/
+.DS_Store
+*.dmg
+src-tauri/target/
+src-tauri/resources/sing-box*.exe

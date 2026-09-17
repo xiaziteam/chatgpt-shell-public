@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>ChatGPT虾壳需要麦克风权限以进行语音对话</string>
+	<key>NSCameraUsageDescription</key>
+	<string>ChatGPT虾壳需要摄像头权限以进行视频通话</string>
+</dict>
+</plist>

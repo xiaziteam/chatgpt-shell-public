@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT虾壳</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #e0e0e0; height: 100vh; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .logo { font-size: 56px; margin-bottom: 8px; }
+    .title { font-size: 24px; font-weight: 700; color: #10a37f; margin-bottom: 4px; }
+    .status { font-size: 14px; margin-bottom: 20px; }
+    .connected { color: #10a37f; }
+    .error { color: #e74c3c; }
+    .info { margin-top: 16px; font-size: 12px; color: #888; text-align: center; line-height: 2; }
+    .mode-tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+    .mode-basic { background: #16213e; color: #10a37f; border: 1px solid #10a37f; }
+    .mode-pro { background: #2d1b69; color: #a78bfa; border: 1px solid #a78bfa; }
+    .btn-disconnect { margin-top: 20px; padding: 10px 24px; border: 1px solid #e74c3c; border-radius: 10px; background: transparent; color: #e74c3c; font-size: 14px; cursor: pointer; }
+    .btn-disconnect:hover { background: #e74c3c; color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="logo">🦐</div>
+  <div class="title">ChatGPT虾壳</div>
+  <div class="status" id="status">正在连接隧道...</div>
+  <div class="info" id="info"></div>
+  <button class="btn-disconnect" id="disconnectBtn" style="display:none">断开连接</button>
+
+  <script>
+    var statusEl = document.getElementById('status');
+    var infoEl = document.getElementById('info');
+    var disconnectBtn = document.getElementById('disconnectBtn');
+
+    function setStatus(text, cls) {
+      statusEl.textContent = text;
+      statusEl.className = 'status ' + (cls || '');
+    }
+
+    var invoke = null;
+    if (window.__TAURI_INTERNALS__) {
+      invoke = window.__TAURI_INTERNALS__.invoke;
+    } else if (window.__TAURI__ && window.__TAURI__.core) {
+      invoke = window.__TAURI__.core.invoke;
+    }
+
+    if (invoke) {
+      invoke('get_activation_info').then(function(r) {
+        infoEl.innerHTML = r + '<br><span style="font-size:11px;color:#555">退出应用自动恢复网络</span>';
+      });
+
+      invoke('tunnel_status').then(function(s) {
+        if (s && s.Running) {
+          var mode = s.Running.mode;
+          var tag = mode === 'ChatGPT' ? '<span class="mode-tag mode-basic">Basic</span>' : '<span class="mode-tag mode-pro">Pro</span>';
+          setStatus('隧道已连接 ' + tag + ' · Safari已打开ChatGPT', 'connected');
+          disconnectBtn.style.display = 'block';
+        } else {
+          setStatus('连接失败', 'error');
+        }
+      });
+    }
+
+    disconnectBtn.onclick = function() {
+      if (!invoke) return;
+      invoke('close_chatgpt').then(function(r) {
+        setStatus(r, 'error');
+        disconnectBtn.style.display = 'none';
+        infoEl.textContent = '网络已恢复原状';
+      });
+    };
+  </script>
+</body>
+</html>

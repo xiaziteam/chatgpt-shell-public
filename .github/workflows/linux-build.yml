@@ -1,0 +1,57 @@
+name: Linux Build
+
+on:
+  push:
+    branches: [main]
+    paths: ['client/**', '.github/workflows/linux-build.yml']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf \
+            libssl-dev libgtk-3-dev libsoup-3.0-dev javascriptcoregtk-4.1-dev
+
+      - name: Install frontend deps
+        working-directory: client
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          npm ci
+
+      - name: Download sing-box Linux binary
+        working-directory: client
+        run: |
+          curl -sL "https://github.com/SagerNet/sing-box/releases/download/v1.11.3/sing-box-1.11.3-linux-amd64.tar.gz" -o /tmp/singbox.tar.gz
+          tar xzf /tmp/singbox.tar.gz -C /tmp/singbox-tmp 2>/dev/null || (mkdir -p /tmp/singbox-tmp && tar xzf /tmp/singbox.tar.gz -C /tmp/singbox-tmp)
+          find /tmp/singbox-tmp -name "sing-box" -type f | head -1 | xargs -I{} cp {} src-tauri/resources/sing-box
+          chmod +x src-tauri/resources/sing-box
+
+      - name: Download geoip & geosite databases
+        working-directory: client
+        run: |
+          curl -sL "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db" -o src-tauri/resources/geoip.db
+          curl -sL "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db" -o src-tauri/resources/geosite.db
+
+      - name: Build Tauri app
+        working-directory: client
+        run: npm run tauri build
+
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: chatgpt-shell-linux
+          path: |
+            client/src-tauri/target/release/bundle/appimage/*.AppImage
+            client/src-tauri/target/release/bundle/deb/*.deb
+          retention-days: 30

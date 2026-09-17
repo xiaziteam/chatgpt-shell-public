@@ -1,0 +1,17 @@
+{
+  "name": "chatgpt-shell",
+  "version": "1.2.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.11.1",
+    "@tauri-apps/cli": "^2.11.4"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
