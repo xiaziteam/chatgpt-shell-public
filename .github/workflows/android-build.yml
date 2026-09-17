@@ -19,7 +19,9 @@ jobs:
           java-version: 17
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        run: |
+          # ubuntu-latest runner预装Android SDK; setup-android@v3安装的tools包已被Google移除
+          sdkmanager --version
 
       - name: Accept Android licenses
         run: yes | sdkmanager --licenses 2>/dev/null || true
